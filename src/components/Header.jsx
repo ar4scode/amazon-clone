@@ -34,7 +34,7 @@ const Header = () => {
           className="bg-amber-50 w-3/4 h-9 md:h-10 pl-3 rounded-bl-md rounded-tl-md text-sm"
           placeholder="Search"
         />
-        <button className="bg-[#FEBD69] rounded-br-md rounded-tr-md cursor-pointer focus:outline-0 h-9 md:h-10 p-2">
+        <button className="bg-[#FEBD69] flex items-center rounded-br-md rounded-tr-md cursor-pointer focus:outline-0 h-9 md:h-10 p-2">
           <img className="w-4 md:w-8" src={searchIcon} alt="Search" />
         </button>
       </div>
@@ -49,7 +49,7 @@ const Header = () => {
 
         {/* Cart */}
         <a href="" className="text-amber-50 flex items-center gap-1 p-1">
-          <img className="w-4 md:w-8" src={cartIcon} alt="Cart" />
+          <img className="w-4 md:w-10" src={cartIcon} alt="Cart" />
           <span className="text-xs">Cart</span>
         </a>
       </div>
