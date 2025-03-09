@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-black flex items-center justify-between w-full p-1 md:p-3">
+    <header className="bg-black top-0 flex items-center justify-between w-full p-1 md:p-3 fixed">
       {/* Logo */}
       <a href="" className="ml-2 md:ml-6">
         <img
