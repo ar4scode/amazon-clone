@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import rating from "../assets/ratings/rating-0.png" // for test
+import Rating from "./Rating";
 
 const Products = () => {
   const [products, setProducts] = useState([])
@@ -16,11 +16,11 @@ const Products = () => {
     <main className="grid grid-cols-1 md:grid-cols-2 md:gap-30 lg:grid-cols-3 lg:gap-20 xl:grid-cols-5 xl:gap-6 gap-4 mt-15 p-5">
       {products.map((product) => {
         return (
-          <div className="flex flex-col  shadow-sm shadow-gray-300" key={product.id}>
+          <div className="flex flex-col  shadow-sm shadow-gray-200 px-4" key={product.id}>
             <img className="max-w-40 m-auto" src={product.image} alt="" />
-            <p className="pt-6 max-w-80">{product.name}</p>
+            <p className="pt-6 max-w-80 md:font-semibold">{product.name}</p>
             <div className="flex items-center mt-2">
-              <img className="w-25" src={rating} alt="" />
+              <Rating rating={product.rating.stars} />
               <p className="pl-2 text-blue-500 font-semibold">{product.rating.count}</p>
             </div>
             <p className="mt-2 font-semibold text-lg">${(product.priceCents / 100).toFixed(2)}</p>
