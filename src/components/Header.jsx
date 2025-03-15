@@ -1,10 +1,10 @@
 import amazonDesktopLogo from "../assets/amazon-logo-white.png";
 import amazonMobileLogo from "../assets/amazon-mobile-logo-white.png";
-import searchIcon from "../assets/icons/search-icon.png";
 import cartIcon from "../assets/icons/cart-icon.png";
 import { useEffect, useState } from "react";
+import SearchBar from "./SearchBar";
 
-const Header = () => {
+const Header = ({products}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -28,16 +28,7 @@ const Header = () => {
       </a>
 
       {/* Search Bar */}
-      <div className="flex w-full pl-3 max-w-xs sm:max-w-md md:max-w-lg">
-        <input
-          type="text"
-          className="bg-amber-50 w-3/4 h-9 md:h-10 pl-3 rounded-bl-md rounded-tl-md text-sm"
-          placeholder="Search"
-        />
-        <button className="bg-[#FEBD69] flex items-center rounded-br-md rounded-tr-md cursor-pointer focus:outline-0 h-9 md:h-10 p-2">
-          <img className="w-4 md:w-8" src={searchIcon} alt="Search" />
-        </button>
-      </div>
+      <SearchBar products={products} />
 
       {/* User & Cart Section */}
       <div className="flex items-center space-x-4 pr-3">

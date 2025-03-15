@@ -1,16 +1,6 @@
-import { useEffect, useState } from "react";
 import Rating from "./Rating";
 
-const Products = () => {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    fetch('../products.json')
-      .then(res => res.json())
-      .then(setProducts)
-      .catch(error => console.log("Can not fetch Data", error))
-  }, [])
-
+const Products = ({products}) => {
   
   return (
     <main className="grid grid-cols-1 md:grid-cols-2 md:gap-30 lg:grid-cols-3 lg:gap-20 xl:grid-cols-5 xl:gap-6 gap-4 mt-15 p-5">
